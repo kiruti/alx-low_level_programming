@@ -1,22 +1,15 @@
-#include <unistd.h>
 #include "holberton.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * print_alphabet - Check description
+ * Description: It prints the alphabet in lowercase fallowed by a new line
+ * Return: Nothing.
  */
-
-int main(void)
+void print_alphabet(void)
 {
-	char word[9] = "Holberton";
-	int i;
+	char i;
 
-	for (i = 0; i < 9; i++)
-		_putchar(word[i]);
+	for (i = 'a'; i <= 'z'; i++)
+		_putchar(i);
 	_putchar('\n');
-
-	return (0);
 }
