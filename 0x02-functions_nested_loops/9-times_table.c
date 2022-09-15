@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * times_table - Check description
+ * Description: It prints 9 times table starting with 0
+ * Return: Nothing.
  */
 void times_table(void)
 {
@@ -17,7 +17,8 @@ void times_table(void)
 
 			if ((n / 10) == 0)
 			{
-				_putchar(' ');
+				if (j != 0)
+					_putchar(' ');
 				_putchar(n + '0');
 
 				if (j == 9)
@@ -35,6 +36,7 @@ void times_table(void)
 				_putchar(' ');
 			}
 		}
-		_putchar('\n');
+		
 	}
 }
+
