@@ -1,21 +1,24 @@
 #include "main.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - entry point
  *
- * Return: Always 0.
+ * Description: Prints Holberton with _putchar
+ *
+ * Return: always 0
  */
+
 int main(void)
 {
-char letter[] = "Holberton";
-int i;
+	int i = 0;
+	char c;
+	char s[] = "Holberton\n";
 
-for (i = 0; i < 9; i++)
-{
-_putchar(letter[i]);
-}
-
-_putchar('\n');
-
-return (0);
+	while (i <= 9)
+	{
+		c = s[i];
+		_putchar(c);
+		i++;
+	}
+	return (0);
 }
