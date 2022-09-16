@@ -1,19 +1,21 @@
-#include <unistd.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
- * main - Check description
- * Description: It prints the word Holberton, followed by a new line.
- * Return: 0.
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	char word[9] = "Holberton";
-	int i;
+char letter[] = "Holberton";
+int i;
 
-	for (i = 0; i < 9; i++)
-		_putchar(word[i]);
-	_putchar('\n');
+for (i = 0; i < 9; i++)
+{
+_putchar(letter[i]);
+}
 
-	return (0);
+_putchar('\n');
+
+return (0);
 }
