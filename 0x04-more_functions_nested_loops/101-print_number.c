@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_number - takes an integer and prints it with _putchar
@@ -44,4 +44,3 @@ void print_number(int n)
 		_putchar('0' + a8);
 	_putchar('0' + a9);
 }
-
