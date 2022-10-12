@@ -1,1 +1,6 @@
-struct dog; 
+struct dog
+{
+	char *name:
+	int age;
+	char *owner; 
+}
