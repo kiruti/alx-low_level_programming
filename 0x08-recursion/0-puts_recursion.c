@@ -2,8 +2,9 @@
 
 /**
  * _puts_recursion - function that prints a string followed by a new line
- * @s : is the value of arguments taken from the main function
+ * @s: is the value of arguments taken from the main function
  *
+ * Return: 0
  **/
 
 void _puts_recursion(char *s)
