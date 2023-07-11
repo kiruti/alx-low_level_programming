@@ -1,15 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
+ * free_grid - this fuction free space memroy used in a double
  *
+ * @grid: first variable
+ * @height:is the second vsriable
  *
- * free_grid: this fuction free space memroy used in a double
- *
- * @grid - first variable
- * @height - is the second vsriable
- *
- **/
+ */
 
 
 void free_grid(int **grid, int height)
@@ -22,6 +21,4 @@ void free_grid(int **grid, int height)
 	}
 
 		free(grid);
-
-
 }
