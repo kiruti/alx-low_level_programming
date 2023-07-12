@@ -24,12 +24,10 @@ char *_strdup(char *str)
 	ptr = (char *)malloc(len * sizeof(char));
 
 		strcpy(ptr, str);
-		free(ptr);
 
-		if (ptr == NULL)
-		{
+		if (s == NULL)
 			return (0);
-		
-		}
+
+		free(ptr);
 		return (ptr);
 }
