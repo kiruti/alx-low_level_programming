@@ -6,7 +6,7 @@
  *
  * @b: this is a variable that is used to carry the smae int
  *
- * return: the pointer of new space
+ * Return: the pointer of new space
  *
  **/
 
