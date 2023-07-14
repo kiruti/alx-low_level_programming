@@ -17,7 +17,12 @@ void *malloc_checked(unsigned int b)
 	int  *marry;
 
 	marry = (int *) malloc(sizeof(int) * b);
+		
+	if (marry == NULL)
+	{
+		exit(98);
 
+	}
 	return (marry);
 
 }
