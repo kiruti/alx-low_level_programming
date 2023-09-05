@@ -3,8 +3,8 @@
 
 /**
  * _puts_recursion - is a protottype of the function
- * *s: variable that is called from the main
- * s: Has fall out 
+ * @s : variable that is called from the main
+ *
  **/
 
 
