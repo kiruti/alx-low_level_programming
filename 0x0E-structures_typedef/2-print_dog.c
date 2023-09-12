@@ -2,8 +2,6 @@
 #include "dog.h"
 
 /**
-*
-*
 *print_dog - is a function that prints a strut
 *@dog: is used to it
 *@d: is the name of the new user of that struct
@@ -12,7 +10,6 @@
 
 void print_dog(struct dog *d)
 {
-
 	if (d == NULL)
 		return;
 
