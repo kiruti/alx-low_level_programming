@@ -1,19 +1,16 @@
-#include <stdio.h>
 #include "dog.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
-*print_dog - is a function that prints a strut
-*@dog: is used to it
-*@d: is the name of the new user of that struct
-*
+* print_dog - prints the dog struct
+* @d: pointer to the dog struct
 **/
-
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-		return;
-
-	printf("Name : %s \n", d->name);
-	printf("Age : %f \n", d->age);
-	printf("Owner : %s \n", d->owner);
+		if (d)
+	{
+		d->name ? (printf("Name: %s\n", d->name)) : (printf("Name: (nil)\n"));
+		printf("Age: %f\n", d->age);
+		d->owner ? (printf("Owner: %s\n", d->owner)) : (printf("Owner: (nil)\n"));
+	}
 }
