@@ -1,27 +1,39 @@
-#include <stdio.h>
 #include "dog.h"
-#include <string.h>
 #include <stdlib.h>
-
 /**
-*
-* new_dog - function that create a new dog
-* @name : variable of name
-* @age : variable that represent age
-* @owner : i may think it is slavery but not
-*
+* new_dog - creates a new struct of type dog
+* @name: struct parameter name
+* @age: struct parameter age
+* @owner: struct parameter owner
+* Return: returns pointer to buffer of datatype dog
 **/
-
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
+		int nlen, olen, i;
+		dog_t *doggy;
 
-	struct dog *newd;
+			nlen = olen = 0;
+			while (name[nlen++])
+					;
+			while (owner[olen++])
+						;
+				doggy = malloc(sizeof(dog_t));
+			if (doggy == NULL)
+				return (NULL);
 
-	newd = malloc(sizeof(struct dog));
+			doggy->name = malloc(nlen * sizeof(doggy->name));
+			if (doggy == NULL)
+				return (NULL);
+			for (i = 0; i < nlen; i++)
+				doggy->name[i] = name[i];
+				doggy->age = age;
+				doggy->owner = malloc(olen * sizeof(doggy->owner));
 
-	if (newd == NULL)
-		return NULL;
+			if (doggy == NULL)		
+				return (NULL);
 
-		if (name == NULL)
-			free(newd);}
+			for (i = 0; i < olen; i++)
+				doggy->owner[i] = owner[i];
+			
+			return (doggy);
+}
