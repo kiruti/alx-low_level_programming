@@ -1,22 +1,26 @@
-#include "main.h"
+/*
+ *  * File: 0-memset.c
+ *   * Auth: Brennan D Baraban
+ *    */
+
+#include "holberton.h"
 
 /**
- * *_memset - function that fills memory with a constant byte
- * @s - this is the pointer that points to the memory allocation
- * @b - the character variable that will be placed int he memory space
- * @n - is the size of the memory that needs alocation.
- *
- **/
-
-char *_memset(char *s, char b, unsigned int n)
+* memset - Fills the first n bytes of the memory area
+*          pointed to by @s with the constant byte @c.
+* @s: A pointer to the memory area to be filled.
+* @c: The character to fill the memory area with.
+* @n: The number of bytes to be filled.
+*
+* Return: A pointer to the filled memory area @s.
+**/
+void *_memset(void *s, int c, size_t n)
 {
+	unsigned int index;
+	unsigned char *memory = s, value = c;
 
-	unsigned int i; 
+	for (index = 0; index < n; index++)
+		memory[index] = value;
 
-	char *str = (char*) s; 
-	
-	for(i = 0; i < n; i++)
-		str[i] = b;
-	
-	return 0; 	
+	return (memory);
 }

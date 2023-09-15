@@ -1,21 +1,22 @@
-#include"main.h"
-/**
- *
- *  _memcpy - write a function that copies memory area
- *  @dest : memroy copied to this variabel
- *  @src : memory space to be copied from
- *  @n : the number of memroy spcae needed
- *
- */
-char *_memcpy(char *dest, char *src, unsigned int n)
+#include "holberton.h"
+
+ /**
+* _memcpy - Copies @n bytes from the memory area pointed
+*           to by @src into that pointed to by @dest.
+* @dest: A pointer to the memory area to copy @src into.
+* @src: The source buffer to copy characters from.
+* @n: The number of bytes to copy from @src.
+*
+* Return: A pointer to the destination buffer @dest.
+**/
+ void *_memcpy(void *dest, const void *src, size_t n)
 {
+	unsigned int index;
+	unsigned char *destination = dest;
+	const unsigned char *source = src;
 
-	char *csrc = (char *) src;
-	char *cdest = (char *) dest;
-	unsigned int i = 0;
+	for (index = 0; index < n; index++)
+		destination[index] = source[index];
 
-	for (i = 0; i < n; i++)
-		cdest[i] = csrc[i];
-
-	return (0);
+	return (dest);
 }

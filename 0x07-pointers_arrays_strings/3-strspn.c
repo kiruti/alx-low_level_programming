@@ -1,39 +1,36 @@
-#include"main.h"
-#include <stdbool.h>
-#include <string.h>
+#include "holberton.h"
 
-/*
- * _strspn - function that counts number of same chracters in diffrent strings
- * @s : this is the first string that needs compearing to
- * @accept : this is the second string that is used to compear
- */
-
+/**
+* _strspn - Gets the length of a prefix substring.
+*   
+* @s: The string to be searched.
+* @accept: The prefix to be measured.
+*
+* Return: The number of bytes in s which
+*         consist only of bytes from accept.
+**/
 unsigned int _strspn(char *s, char *accept)
 {
+		unsigned int bytes = 0;
+		int index;
 
-	unsigned int initial_length = 0;
-	unsigned int len1 = strlen(s);
-	unsigned int len2 = strlen(accept);
-	unsigned int i;
-	unsigned int j;
-
-	for (i = 0; i < len1; i++)
+	while (*s)
 	{
-		bool found_match = false;
-
-		for (j = 0; j < len2; j++)
-			if (accept[j] == s[i])
+		for (index = 0; accept[index]; index++)
+		{
+			if (*s == accept[index])
 			{
-				found_match = true;
+				bytes++;
 				break;
 			}
-		if  (!found_match)
-			break;
 
-		else
-			initial_length++;
 
+			else if (accept[index + 1] == '\0')
+				return (bytes);
+		}
+
+		s++;
 	}
-	return (initial_length);
 
+	return (bytes);
 }
