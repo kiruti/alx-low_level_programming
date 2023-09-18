@@ -1,44 +1,54 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 
 /**
+* argstostr - convert the params passed to the program to string
+* @ac: the argument count
+* @av: the argument vector
 *
-* argstostr = is a function that concatenates all argument of your program
-* @ac : this is the argumetn that returns number of arguments
-* @av : this is parses the added argumments
-*
+* Return: ...
 **/
-
-
 char *argstostr(int ac, char **av)
 {
-		char *strcon;
-		int i, j, len, bufferlen;
+		int ch = 0, i = 0, j = 0, k = 0;
+		char *s;
 
-	if (ac == 0)
-		return (NULL);
-	if (av == 0)
-		return (NULL);
+		if (ac == 0 || av == NULL)
+			return (NULL);
 
-	i = j = len = bufferlen = 0;
-	for (i = 0; av[j]; i++)
-	{
-		for (j = 0; av[i][j]; j++)
-			len++;
+		while (i < ac)
+		{
+			while (av[i][j])
+			{
+				ch++;
+				j++;
+			}
+
+			j = 0;
+			i++;
+		}
+
+		s = malloc((sizeof(char) * ch) + ac + 1);
+
+		i = 0;
+		while (av[i])
+		{
+			while (av[i][j])
+			{
+				s[k] = av[i][j];
+				k++;
+				j++;
+			}
+
+			s[k] = '\n';
+
+			j = 0;
+			k++;
+			i++;
+		}
+
+		k++;
+		s[k] = '\0';
+		return (s);
 	}
-
-	 strcon = (char *)malloc(len * sizeof(char) + ac + 1);
-
-	if (strcon == NULL)
-		return (NULL);
-	for (i = 0; av[i]; i++)
-	{
-		for (j = 0; av[i][j]; bufferlen++)
-			strcon[bufferlen] = av[i][j];
-		 strcon[bufferlen] = '\n';
-		 bufferlen++;
-	}
-	strcon[bufferlen] = '\0';
-	return (strcon);
-}
