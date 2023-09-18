@@ -1,26 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
-* alloc_grid -  function thatcreates memory pointer of a double array
-* @width: is  variable used is the width
-* @height: is another variable to be used in array
+* alloc_grid - ...
+* @width: ...
+* @height: ...
 *
+* Return: ...
 **/
-
 int **alloc_grid(int width, int height)
 {
+	int i, j, k, l;
+	int **a;
 
-	int  **ptr;
-	int i = 0;
+	if (width <= 0 || height <= 0)
+		return (NULL);
 
-	ptr = (int**)malloc(height * sizeof(int*));
+	a = malloc(sizeof(int *) * height);
 
-	for(i = 0; i < height; i++)
-		ptr[i] = (int*)malloc(width * sizeof(int));
+	if (a == NULL)
+	{
+		free(a);
+		return (NULL);
+	}
 
+	for (i = 0; i < height; i++)
+	{
+		a[i] = malloc(sizeof(int) * width);
 
-	return (ptr);
+		if (a[i] == NULL)
+		{
+			for (j = i; j >= 0; j--)
+			{
+			free(a[j]);
+																		}
 
+			free(a);
+			return (NULL);
+		}
+	}
+
+	for (k = 0; k < height; k++)
+	{
+		for (l = 0; l < width; l++)
+		{
+			a[k][l] = 0;
+		}
+	}
+
+	return (a);
 }
