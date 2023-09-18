@@ -1,26 +1,29 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-/**
-*
-* @argv: takes strings inputed from the out side
-* @argc: take count of the string being inpuuted
-*
-**/
 
+/**
+* main - Prints the multiplication of two args numbers
+* @argc: argument count
+* @argv: argument vector
+*
+* Return: Always zero
+**/
 int main(int argc, char *argv[])
 {
-	int mult = 1;
-	int count;
+	int n1 = 0, n2 = 0;
 
+	if (argc == 3)
+	{
+		n1 = atoi(argv[1]);
+		n2 = atoi(argv[2]);
+		printf("%d\n", n1 * n2);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-		for (count = 1; count < argc; count++)
-			{
-		int num = atoi(argv[count]);
-		mult = mult * num;
-
-		printf("%d \n", mult);
-
-			}
-		return (0);
-
+	return (0);
 }
