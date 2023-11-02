@@ -3,7 +3,7 @@ C
 Memory allocation
  By: Julien Barbier
  Weight: 1
- Project over - took place from Sep 3, 2023 8:00 PM to Sep 5, 2023 8:00 PM
+ Ongoing second chance project - started Oct 29, 2023 8:00 PM, must end by Nov 1, 2023 8:00 PM
  An auto review will be launched at the deadline
 In a nutshell…
 Auto QA review: 0.0/47 mandatory & 0.0/18 optional
