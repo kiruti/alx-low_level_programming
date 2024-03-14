@@ -21,19 +21,21 @@ list_t *add_node(list_t **head, const char *str)
 			return (NULL);
 
 		dup = strdup(str);
-		if (dup == NULL)		{
-													free(new);
-															return (NULL);
-																}
+		if (dup == NULL)
+		{
+			free(new);
 
-									for (len = 0; str[len];)
-												len++;
+			return (NULL);
+		}
 
-										new->str = dup;
-											new->len = len;
-												new->next = *head;
+		for (len = 0; str[len];)
+			len++;
+			new->str = dup;
+			new->len = len;
+			new->next = *head;
 
-													*head = new;
 
-														return (new);
+			*head = new;
+
+	return (new);
 }
